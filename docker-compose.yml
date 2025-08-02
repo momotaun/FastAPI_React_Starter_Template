@@ -19,7 +19,14 @@ services:
     command: >
       sh -c "npm run dev -- --host"
     ports:
-      - 5173:51373
+      - 5173:5173
+    develop:
+      watch:
+        - path: ./frontend/app
+          action: sync
+          target: /frontend/app
+          ignore:
+            - node_modules
     volumes:
       - ./frontend/app:/app
       - /app/node_modules

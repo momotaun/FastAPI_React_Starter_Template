@@ -16,3 +16,7 @@ venv/
 
 # Local Database data
 data/
+
+README.md
+
+frontend/app/node_modules
