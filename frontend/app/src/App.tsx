@@ -1,21 +1,14 @@
-import { useEffect, useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HelloPage from "./pages/hello";
 import './App.css'
 
 function App() {
-  const [message, setMessage] = useState<string>('');
-
-  useEffect(() => {
-    fetch('http://localhost:8000/api/v1/hello')
-      .then((res) => res.json())
-      .then((data: { message: string }) => setMessage(data.message))
-      .catch((err) => console.error('Error fetching: ', err));
-  }, []);
-
   return (
-    <>
-      <h1>React + FastAPI</h1>
-      <p>{message}</p>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HelloPage />} />
+      </Routes>
+    </Router>
   )
 }
 
