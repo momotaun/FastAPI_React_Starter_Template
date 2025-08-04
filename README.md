@@ -144,4 +144,4 @@ This project is licensed under the MIT License.
 - [FastAPI](https://fastapi.tiangolo.com/)
 - [React](https://react.dev/)
 - [Vite](https://vitejs.dev/)
-- [Docker](https://www.docker.com
+- [Docker](https://www.docker.com)
